@@ -6,11 +6,11 @@
 // Refer Jenkins manage node to add VMs as nodes
 
 pipeline {
-    agent {
+    agent none
         node {
             checkout scm
         }
-    }
+    
         stages {
                 stage("Source codes"){
                     agent {

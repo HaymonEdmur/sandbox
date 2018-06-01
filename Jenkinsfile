@@ -13,6 +13,7 @@ pipeline {
                         node {
                             // Execute this stage on server docker2 ( label for this node server is docker2)
                             label 'docker2'
+                            checkout scm
                         }
                     }
                     steps {

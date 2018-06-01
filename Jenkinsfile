@@ -6,14 +6,17 @@
 // Refer Jenkins manage node to add VMs as nodes
 
 pipeline {
-    agent none
+    agent {
+        node {
+            checkout scm
+        }
+    }
         stages {
                 stage("Source codes"){
                     agent {
                         node {
                             // Execute this stage on server docker2 ( label for this node server is docker2)
-                            label 'docker2'
-                            checkout scm
+                            label 'docker2
                         }
                     }
                     steps {

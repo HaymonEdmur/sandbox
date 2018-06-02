@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-    node {
-        checkout scm
-    }
-    }
+    agent  any
     stages {
         stage('Build') {
             steps {

@@ -40,7 +40,7 @@ pipeline {
                     }
                     steps {
                         // Run multiple commands/scripts on node server docker4
-                        sh('find /usr -type f -exec ls -ld {} \\;')
+                        sh('find /opt/jenkins -type f -exec ls -ld {} \\;')
                     }
                 }
         }
